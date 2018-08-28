@@ -1,0 +1,27 @@
+##
+# Шаблон по умолчанию 
+##
+default:
+  type: text/plain  
+  template_1:
+    header: "Приветствую Вас уважаемый читатель блога lifeexample.ru"
+    subj: "Информация с сайта lifeexample"
+    footer: "Ознакомиться со всеми материалами можно на сайте lifeexample.ru"
+    subcribe: "С уважением Авдеев Марк"
+
+
+##
+# Почтовый шаблон для рассылки новостей
+##
+news:
+  type: text/html
+  template_1:
+    header: '<h1>#title#<h1>'
+    subj: "Новостная рассылка"
+    footer: '<div style="color:green">[footer]<div>'
+    subcribe: |
+      '<div style="color:red">
+        <em>
+          [subcribe]
+        <em>
+       <div>'

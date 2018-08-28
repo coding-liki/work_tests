@@ -1,0 +1,5 @@
+max_size: 20000
+mime_types:
+  - text/plain
+  - text/csv
+  - text/php
