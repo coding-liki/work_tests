@@ -33,7 +33,11 @@ class FindStrInFile extends FindInFile{
 		}
 		return 0;
 	}
-	
+
+	/*
+	 * Тестовая функция поиска строки по её md5 хешу
+	 *
+	 **/
 	function find_same_md5_hash(){
 		if($this->File_Stream == NULL){
 			trigger_error("Файл не был открыт");
