@@ -1,7 +1,8 @@
 <?php
 
-require_once('FindInFile.php');
+require_once(__DIR__.'/FindInFile.php');
 
+echo __DIR__."\n";
 
 class FindStrInFile extends FindInFile{
 	
@@ -31,5 +32,24 @@ class FindStrInFile extends FindInFile{
 			return 1;
 		}
 		return 0;
+	}
+	
+	function find_same_md5_hash(){
+		if($this->File_Stream == NULL){
+			trigger_error("Файл не был открыт");
+			return FALSE;
+		}	
+		$str = fgets($this->File_Stream);
+		$str_count = 0;
+		$founds = [];
+		
+		while( $str !== FALSE ){
+			if(md5($str) == $this->To_Find){
+				$founds[] = $str_count;
+			}
+			$str_count++;
+			$str = fgets($this->File_Stream);
+		}
+		return $founds;
 	}
 }

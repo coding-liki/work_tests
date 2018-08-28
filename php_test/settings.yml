@@ -1,4 +1,4 @@
-max_size: 20000
+max_size: 200000
 mime_types:
   - text/plain
   - text/csv
